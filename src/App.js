@@ -14,6 +14,7 @@ const useFetch = url => {
     const data = await response.json()
     let newState = data.hits.map((i) => i)
     setData(data.hits)
+    // using the empty array below: if you put a piece of state in there, when it rerenders, it will run useEffect again.
   }, [])
   console.log(data)
   return { data }
