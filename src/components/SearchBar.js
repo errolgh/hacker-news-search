@@ -14,7 +14,7 @@ function SearchBar() {
         setQuery("")
     }
 
-    
+
     return (
         <div className="App">
             <h1>Hacker News Story Search</h1>

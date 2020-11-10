@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import SearchBar from './components/SearchBar'
 import History from './components/History'
 import Results from './components/Results'
-import { API_SEARCH, API_TOP } from './api'
+import { API_TOP } from './api'
 import './App.css'
 
 const useFetch = url => {
@@ -31,7 +31,7 @@ export default function App() {
       <ul>
           {data.map(article => (
             <li className="App-link">
-              <a href={article.url}>{article.title}</a>
+              <a key={article[article]} href={article.url}>{article.title}</a>
             </li>
           ))}
       </ul>

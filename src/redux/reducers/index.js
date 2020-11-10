@@ -1,13 +1,11 @@
+import { resultsReducer } from './results'
+import { historyReducer } from './history'
+import { searchReducer } from './search'
 import { combineReducers } from 'redux'
 
-// add to history
 
-//update user input
-
-//getTopArticles
-
-
-
-
-
-//export all reducers
+export const rootReducer = combineReducers({
+    resultsReducer,
+    historyReducer,
+    searchReducer
+})
