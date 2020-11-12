@@ -1,11 +1,20 @@
 import { resultsReducer } from './results'
 import { historyReducer } from './history'
-import { searchReducer } from './search'
+import { queryReducer } from './query'
+import { topStoriesReducer } from './topstories'
 import { combineReducers } from 'redux'
-
 
 export const rootReducer = combineReducers({
     resultsReducer,
     historyReducer,
-    searchReducer
+    queryReducer,
+    topStoriesReducer
 })
+
+
+
+//potentially simpler reducers:
+
+// updateQuery   ()
+// getResults
+// deleteHistory

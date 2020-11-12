@@ -2,7 +2,6 @@
   text-align: center;
 }
 
-
 .SubHeader {
   text-align: left;
 }
@@ -11,13 +10,7 @@
   height: 40vmin;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -27,11 +20,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
-  text-decoration: none;
   list-style-type: none;
+  text-decoration: none;
   margin-bottom: 3px;
 }
 
