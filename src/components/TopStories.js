@@ -12,9 +12,11 @@ export default function TopStories () {
     },[])
 
     const renderStories = () => {
+        console.log(stories)
+        debugger
         return stories.map(s => {
             return (<li className="App-link">
-                        <a  href={s.url}>{s.title}</a>
+                        <a key={s.article} href={s.url}>{s.title}</a>
                     </li>)
         })
     }
@@ -27,6 +29,5 @@ export default function TopStories () {
     )
 }
 
-// key={s[article]}
 
 
