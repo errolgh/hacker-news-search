@@ -18,3 +18,4 @@ export const rootReducer = combineReducers({
 // updateQuery   ()
 // getResults
 // deleteHistory
+

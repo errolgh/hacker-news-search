@@ -1,13 +1,12 @@
 import { TOP_STORIES_API } from '../../apis'
 
+//default render
 export const topStoriesQuery = () => async dispatch => {
   const response = await TOP_STORIES_API.get('')
   console.log("from /actions/index.js: ", response.data.hits)
   dispatch( {type: 'GET_TOP_STORIES', payload: response.data.hits } )
 }
 
-
-// return {type: "GET_TOP_STORIES", payload: response.data.hits}
 
 // i'm pretty sure this is going to have to take in a query obj from the form submission
 
