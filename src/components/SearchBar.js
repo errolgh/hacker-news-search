@@ -1,16 +1,23 @@
-import { useState } from 'react'
+import { useState } from "react"
+import { useDispatch } from 'react-redux'
+import { submitQuery } from '../redux/actions'
 
 function SearchBar() {
     const [query, setQuery] = useState("")
+    const dispatch = useDispatch()
+    
 
-    const handleInput = event => setQuery(event.target.value)
+    const handleInput = event => {
+        // console.log(event.target.value)
+        setQuery(event.target.value)
+    }
 
 
     const handleSubmit = event => {
-        // this needs to be update to the state \/
-        
-        alert(`Okay, I'll fetch these ${query} stories for you.`)
         event.preventDefault()
+        // debugger
+        console.log(event.target.value)
+        dispatch(submitQuery(event.target.value))
         setQuery("")
     }
 
@@ -18,13 +25,15 @@ function SearchBar() {
     return (
         <div className="App">
             <h1>Hacker News Story Search</h1>
-            <form onSubmit={handleSubmit} id="searchform">
+            <form onSubmit={(event)=>handleSubmit(event)} id="searchform">
                 <input
                     id="prompt"
+                    required
                     onChange={handleInput}            
                     value={query}
                     placeholder="Search for Stories"
                 />
+                <input className="Button-margin" type="submit" value="Search" />
             </form>
         </div>
     )

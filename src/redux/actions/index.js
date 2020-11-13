@@ -1,34 +1,29 @@
-import { TOP_STORIES_API } from '../../apis'
+import { TOP_STORIES_API, SEARCH_API } from '../../apis'
 
 //default render
 export const topStoriesQuery = () => async dispatch => {
   const response = await TOP_STORIES_API.get('')
-  console.log("from /actions/index.js: ", response.data.hits)
+  // console.log("from /actions/index.js: ", response.data.hits)
   dispatch( {type: 'GET_TOP_STORIES', payload: response.data.hits } )
 }
 
 
-// i'm pretty sure this is going to have to take in a query obj from the form submission
 
-// export const getResults = query => async dispatch => {
-//   const response = await searchQuery.get(query)
-//   dispatch( {type: 'GET_RESULTS', payload: response})
-// }
+// i'm pretty sure this is going to have to take in a query obj from the form submission
+// search
+
+export const submitQuery = query => async dispatch => {
+  const response = await SEARCH_API.get(`${query}`)
+  console.log("from /actions/index.js[submitQuery(){}]: ", response.data.hits)
+  dispatch( {type: "GET_RESULTS", payload: response.data.hits } )
+}
+
+
 
 export const clearResults = results => {
   return {type: "CLEAR_RESULTS"}
 }
 
-/*
-
-REMEMBER: "PAYLOAD" IS ACTUALLY OPTIONAL  */
-// search
-export const updateQuery = query => {
-  return {
-      type: "UPDATE_QUERY",
-      payload: query
-  }
-}
 
 export const clearQuery = query => {
   return {type: "CLEAR_QUERY"}
