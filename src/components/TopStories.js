@@ -21,7 +21,7 @@ export default function TopStories () {
             
     return (
         <div>
-            <h3 className="SubHeader">TopStories</h3>
+            <h3 className="SubHeader">Today's Top Stoires</h3>
             <ul>{stories && renderStories()}</ul>
         </div>
     )
