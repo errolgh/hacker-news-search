@@ -3,9 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { topStoriesQuery } from "../redux/actions"
 
 export default function TopStories () {
-    const stories = useSelector( state => state.stories)
+    const stories = useSelector( state => state.topStoriesReducer[0])
     const dispatch = useDispatch()
-    console.log("stories:", stories)
     
     useEffect(() => {
         dispatch(topStoriesQuery(stories))
@@ -14,7 +13,7 @@ export default function TopStories () {
     const renderStories = () => {
         return stories.map(s => {
             return (<li className="App-link">
-                        <a  href={s.url}>{s.title}</a>
+                        <a key={s.title} href={s.url}>{s.title}</a>
                     </li>)
         })
     }
@@ -26,7 +25,3 @@ export default function TopStories () {
         </div>
     )
 }
-
-// key={s[article]}
-
-
