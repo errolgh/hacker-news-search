@@ -1,12 +1,11 @@
 import { TOP_STORIES_API } from '../../apis'
 
-export const topStoriesQuery = () => async () => {
+
+//axios is not necessary, but it is <strong>supposed</strong> to make life easier
+export const topStoriesQuery = () => async dispatch => {
   const response = await TOP_STORIES_API.get('')
   console.log("from /actions/index.js: ", response.data.hits)
-  return {
-    type: 'GET_TOP_STORIES', 
-    payload: response.data.hits
-  }
+  dispatch( {type: 'GET_TOP_STORIES', payload: response.data} )
 }
 
 // results
