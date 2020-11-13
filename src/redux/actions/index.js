@@ -1,23 +1,15 @@
 import { TOP_STORIES_API } from '../../apis'
 
-
-//axios is not necessary, but it is <strong>supposed</strong> to make life easier
 export const topStoriesQuery = () => async dispatch => {
   const response = await TOP_STORIES_API.get('')
   console.log("from /actions/index.js: ", response.data.hits)
   dispatch( {type: 'GET_TOP_STORIES', payload: response.data.hits } )
 }
 
-// results
-// this reducer should have the axios response payload
-// export const getResults = results => {
-//   return {
-//       type: "GET_RESULTS",
-//       payload: results
-//   }
-// }
+
+// return {type: "GET_TOP_STORIES", payload: response.data.hits}
+
 // i'm pretty sure this is going to have to take in a query obj from the form submission
-// else leave the argument for getResults as '()'
 
 // export const getResults = query => async dispatch => {
 //   const response = await searchQuery.get(query)
@@ -25,10 +17,7 @@ export const topStoriesQuery = () => async dispatch => {
 // }
 
 export const clearResults = results => {
-  return {
-      type: "CLEAR_RESULTS",
-      payload: results  // probably not necessary here.
-  }
+  return {type: "CLEAR_RESULTS"}
 }
 
 /*
@@ -43,12 +32,8 @@ export const updateQuery = query => {
 }
 
 export const clearQuery = query => {
-  return {
-      type: "CLEAR_QUERY",
-      payload: query  // probably not necessary here.
-  }
+  return {type: "CLEAR_QUERY"}
 }
-
 
 
 //history
@@ -60,8 +45,5 @@ export const addHistory = result => {
 }
 
 export const clearHistory = result => {
-  return {
-      type: "CLEAR_HISTORY",
-      payload: result  // probably not necessary here.
-  }
+  return {type: "CLEAR_HISTORY"}
 }

@@ -1,31 +1,32 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from 'react-redux'
 import { topStoriesQuery } from "../redux/actions"
-import { topStoriesReducer } from "../redux/reducers/topstories"
 
 export default function TopStories () {
-    const selector = useSelector( state => state.topStoriesReducer)
+    const stories = useSelector( state => state.stories)
     const dispatch = useDispatch()
+    console.log("stories:", stories)
     
-    useEffect(() => dispatch( topStoriesQuery(selector)),[])
-    
-    // const renderStories = () => {
-        //     return data.map(article => {
-            //         return (<li className="App-link">
-            //                     <a key={article[article]} href={article.url}>{article.title}</a>
-            //                 </li>)
-            //     })
-            // }
+    useEffect(() => {
+        dispatch(topStoriesQuery(stories))
+    },[])
 
+    const renderStories = () => {
+        return stories.map(s => {
+            return (<li className="App-link">
+                        <a  href={s.url}>{s.title}</a>
+                    </li>)
+        })
+    }
+            
     return (
         <div>
             <h3 className="SubHeader">TopStories</h3>
-            <ul>
-                {/* {renderStories()} */}
-            </ul>
+            <ul>{stories && renderStories()}</ul>
         </div>
     )
 }
 
+// key={s[article]}
 
 
