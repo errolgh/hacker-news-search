@@ -1,28 +1,36 @@
-import { useEffect } from "react"
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { topStoriesQuery } from "../redux/actions"
 
 export default function TopStories () {
-    const stories = useSelector( state => state.topStories[0])
+    const stories = useSelector( state => state.topStories[0] )
+    const results = useSelector( state => state.results[0] )
     const dispatch = useDispatch()
+    
     
     useEffect(() => {
         dispatch(topStoriesQuery(stories))
         // eslint-disable-next-line
     },[])
 
-    const renderStories = () => {
+
+    const renderTopStories = () => {
         return stories.map(s => {
             return (<li key={s.objectID} className="App-link">
-                        <a  href={s.url}>{s.title}</a>
-                    </li>)
+                <a  href={s.url}>{s.title}</a>
+            </li>)
         })
     }
-            
+         
+    
     return (
         <div>
-            <h3 className="SubHeader">Today's Top Stoires</h3>
-            <ul>{stories && renderStories()}</ul>
+            {!results && 
+                <div>
+                   <h3 className="SubHeader">Today's Top Stoires</h3>
+                   <ul>{stories && renderTopStories()}</ul>
+                </div>
+            }
         </div>
     )
 }

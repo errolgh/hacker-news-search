@@ -1,28 +1,41 @@
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { results } from '../redux/actions'
-//results reducer
-//useState
-//useEffect
+// import { clearResults } from '../redux/actions'
 
 
 export default function Results () {
-    const results = useSelector(state => state.results)
-    // this component will render and rerender results based on state.results change 
-    // may not need useDispatch, but useEffect would be nice to rerender with every state.results change.
+    const results = useSelector(state => state.results[0])
+    const lastQuery = useSelector(state => state.lastQuery)
+    const dispatch = useDispatch()
 
 
-    
+
+    // // experimental code: (using useEffect to rerender)
+    // useEffect(() => {
+    //     // setNewResults(results)
+    //     // eslint-disable-next-line
+    // }, [])
+
+
+    const renderResults = () => {
+        return results.map(r => {
+            return (<li key={r.objectID} className="App-li">
+                <a href={r.url}>{r.title}</a>
+            </li>)
+        })
+    }
+
 
 
     return (
         <div>
             {results &&
                 <div>
-                    <h3 className="SubHeader">Results</h3>
-                    <button className= "Button-margin">Clear Results</button>
+                    <button>Back to Top Stories</button>
+                    <h3 className="SubHeader">Showing results for "{lastQuery}"</h3>
+                    <ul>{renderResults()}</ul>
                 </div>
-            }
-            
+            } 
         </div>
     )
 }

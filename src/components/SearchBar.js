@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch } from 'react-redux'
-import { submitQuery } from '../redux/actions'
+import { submitQuery, lastQuery } from '../redux/actions'
 
 function SearchBar() {
     const [query, setQuery] = useState("")
@@ -8,7 +8,6 @@ function SearchBar() {
     
 
     const handleInput = event => {
-        // console.log(event.target.value)
         setQuery(event.target.value)
     }
 
@@ -17,6 +16,7 @@ function SearchBar() {
         event.preventDefault()
         console.log("submit value: " , query)
         dispatch(submitQuery(query))
+        dispatch(lastQuery(query))
         setQuery("")
     }
 
