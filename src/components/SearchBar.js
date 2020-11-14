@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch } from 'react-redux'
-import { submitQuery, lastQuery } from '../redux/actions'
+import { submitQuery, lastQuery, addToHistory } from '../redux/actions'
 
 function SearchBar() {
     const [query, setQuery] = useState("")
@@ -16,7 +16,7 @@ function SearchBar() {
         event.preventDefault()
         dispatch(submitQuery(query))
         dispatch(lastQuery(query))
-        console.log(stateobj)
+        dispatch(addToHistory(query))
         setQuery("")
     }
 

@@ -7,6 +7,7 @@ export default function History () {
 
 
     const renderHistory = () => {
+        console.log(history)
         // this should trigger a search on the last history event
 
         // render an a tag that generates a results page based on that search parameter
@@ -14,6 +15,12 @@ export default function History () {
         // the history object needs a query value -- that's it!
 
         // if the result is already in the history array, do not add it to the history
+
+        // dispatch an action with the query and history array?
+        return history.map(h => {
+            return (<li>{h}</li>
+            )
+        })
     }
 
 

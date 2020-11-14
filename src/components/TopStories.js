@@ -16,7 +16,7 @@ export default function TopStories () {
 
     const renderTopStories = () => {
         return stories.map(s => {
-            return (<li key={s.objectID} className="App-link">
+            return (<li key={s.objectID} className="App-li">
                 <a  href={s.url}>{s.title}</a>
             </li>)
         })
@@ -27,7 +27,7 @@ export default function TopStories () {
         <div>
             {!results && 
                 <div>
-                   <h3 className="SubHeader">Today's Top Stoires</h3>
+                   <h3 className="SubHeader">Today's Top Stories</h3>
                    <ul>{stories && renderTopStories()}</ul>
                 </div>
             }

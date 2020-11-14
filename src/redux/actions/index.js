@@ -7,14 +7,6 @@ export const topStoriesQuery = () => async dispatch => {
   dispatch( {type: 'GET_TOP_STORIES', payload: response.data.hits } )
 }
 
-// dynamic h3 tag for results
-export const lastQuery = query => {
-  return {
-    type: "SAVE_LAST_QUERY",
-    payload: query
-  }
-}
-
 
 // on submission of query
 export const submitQuery = query => async dispatch => {
@@ -24,16 +16,25 @@ export const submitQuery = query => async dispatch => {
 }
 
 
+// dynamic h3 tag for results
+export const lastQuery = query => {
+  return {
+    type: "SAVE_LAST_QUERY",
+    payload: query
+  }
+}
+
+
 export const clearResults = results => {
   return {type: "CLEAR_RESULTS"}
 }
 
 
 //history
-export const addHistory = result => {
+export const addToHistory = query => {
   return {
-      type: "ADD_HISTORY",
-      payload: result
+      type: "ADD_TO_HISTORY",
+      payload: query
   }
 }
 
