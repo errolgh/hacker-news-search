@@ -2,12 +2,14 @@ import { useSelector } from 'react-redux'
 
 export default function History () {
     const history = useSelector(state => state.history[0])
+    const lastState = useSelector(state => state)
 // this component will render results based on "pushing" queries into a history array
 // i will need to use useSelector here and possibly a state object to update history as a user searches
 
 
     const renderHistory = () => {
-        console.log(history)
+        console.log("lastState: ", lastState)
+        console.log('history:' , history)
         // this should trigger a search on the last history event
 
         // render an a tag that generates a results page based on that search parameter
