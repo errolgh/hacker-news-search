@@ -14,9 +14,9 @@ function SearchBar() {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log("submit value: " , query)
         dispatch(submitQuery(query))
         dispatch(lastQuery(query))
+        console.log(stateobj)
         setQuery("")
     }
 
