@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 
 export default function History () {
-    const history = useSelector(state => state.history[0])
+    const history = useSelector(state => state.history)
     const lastState = useSelector(state => state)
 // this component will render results based on "pushing" queries into a history array
 // i will need to use useSelector here and possibly a state object to update history as a user searches
@@ -20,7 +20,9 @@ export default function History () {
 
         // dispatch an action with the query and history array?
         return history.map(h => {
-            return (<li>{h}</li>
+            return (<li className="App-li">
+                <a>{h}</a>
+            </li>
             )
         })
     }
@@ -28,9 +30,9 @@ export default function History () {
 
     return (
         <div>
-            {history &&
+            {!!history.length &&
                 <div>
-                    <h3 className="SubHeader">Your Search History ({history.length})</h3>
+                    <h3 className="SubHeader">Search History ({history.length})</h3>
                     <ul>
                         {renderHistory()}
                     </ul>
