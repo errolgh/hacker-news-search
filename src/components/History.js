@@ -1,8 +1,9 @@
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 export default function History () {
     const history = useSelector(state => state.history)
     const lastState = useSelector(state => state)
+    const dispatch = useDispatch()
 // this component will render results based on "pushing" queries into a history array
 // i will need to use useSelector here and possibly a state object to update history as a user searches
 
@@ -36,7 +37,7 @@ export default function History () {
                     <ul>
                         {renderHistory()}
                     </ul>
-                    <button className= "Button-margin">Clear History</button>
+                    <button className= "Button-margin" onClick={()=>{dispatch({type:"CLEAR_HISTORY"})}}>Clear History</button>
                 </div>
             }
         </div>
