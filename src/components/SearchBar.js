@@ -13,11 +13,10 @@ function SearchBar() {
     }
 
 
-    const handleSubmit = event => {
+    const handleSubmit = (event) => {
         event.preventDefault()
-        // debugger
-        console.log(event.target.value)
-        dispatch(submitQuery(event.target.value))
+        console.log("submit value: " , query)
+        dispatch(submitQuery(query))
         setQuery("")
     }
 

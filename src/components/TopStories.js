@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { topStoriesQuery } from "../redux/actions"
 
 export default function TopStories () {
-    const stories = useSelector( state => state.topStoriesReducer[0])
+    const stories = useSelector( state => state.topStories[0])
     const dispatch = useDispatch()
     
     useEffect(() => {

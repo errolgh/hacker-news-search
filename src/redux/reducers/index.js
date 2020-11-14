@@ -5,10 +5,10 @@ import { topStoriesReducer } from './topstories'
 import { combineReducers } from 'redux'
 
 export const rootReducer = combineReducers({
-    resultsReducer,
-    historyReducer,
-    queryReducer,
-    topStoriesReducer
+    results : resultsReducer,
+    history : historyReducer,
+    query : queryReducer,
+    topStories : topStoriesReducer
 })
 
 

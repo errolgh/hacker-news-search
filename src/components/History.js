@@ -6,7 +6,7 @@ export default function History () {
             {false &&
                 <div>
                     <h3 className="SubHeader">Your Search History</h3>
-                    <button classname= "Button-margin">Clear History</button>
+                    <button className= "Button-margin">Clear History</button>
                 </div>
             }
         </div>
