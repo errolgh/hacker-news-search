@@ -4,7 +4,7 @@ export const historyReducer = (state = [], action) => {
             console.log("action", action)
             return [action.payload, ...state]
         case "CLEAR_HISTORY":
-            return state
+            return [...state]
         default:
             return state
     }

@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 
 export default function Results () {
-    const results = useSelector(state => state.results[0])
+    const results = useSelector(state => state.results)
     const lastQuery = useSelector(state => state.lastQuery)
 
 
@@ -16,7 +16,7 @@ export default function Results () {
 
     return (
         <div>
-            {results &&
+            {!!results.length &&
                 <div>
                     <button>Back to Top Stories</button>
                     <h3 className="SubHeader">Showing results for "{lastQuery}"</h3>

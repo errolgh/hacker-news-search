@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
+import { clearHistory } from '../redux/actions'
 
 export default function History () {
     const history = useSelector(state => state.history)
@@ -22,7 +23,12 @@ export default function History () {
         // dispatch an action with the query and history array?
         return history.map(h => {
             return (<li className="App-li">
-                <a>{h}</a>
+                <button 
+                    key={h} 
+                    // onClick={}
+                    className="App-history">
+                        {h}
+                </button>
             </li>
             )
         })
@@ -37,7 +43,7 @@ export default function History () {
                     <ul>
                         {renderHistory()}
                     </ul>
-                    <button className= "Button-margin" onClick={()=>{dispatch({type:"CLEAR_HISTORY"})}}>Clear History</button>
+                    <button className= "Button-margin" onClick={()=>{clearHistory({type:"CLEAR_HISTORY"})}}>Clear History</button>
                 </div>
             }
         </div>

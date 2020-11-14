@@ -1,7 +1,7 @@
 export const topStoriesReducer = (state = [], action) => {
     switch(action.type) {
         case "GET_TOP_STORIES":
-            return [state, ...action.payload]
+            return [...action.payload, ...state]
         default:
             return state
     }
