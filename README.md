@@ -2,12 +2,12 @@
 This SPA features the <a href="https://hn.algolia.com/api/">Hacker News Algolia API.<a/>
 
 <h2>Install</h2>
-### Local environment:
-```
-git clone https://github.com/errolgh/hacker-news-search.git
-npm i
-npm start
-```
+<h3>Local environment:</h3>
+<code>
+  git clone https://github.com/errolgh/hacker-news-search.git<br/>
+  npm i<br/>
+  npm start</br>
+</code>
 ### Hosted on Netlify:
 [Hacker News App :rocket:](https://cranky-stonebraker-12c9f2.netlify.app/) 
 
