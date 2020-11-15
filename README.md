@@ -9,7 +9,7 @@ npm i
 npm start
 ```
 ### Hosted by Netlify:
-<a href="https://cranky-stonebraker-12c9f2.netlify.app/" target="_blank" rel="noopener">Hacker News Search App</a>
+[Hacker News App](https://cranky-stonebraker-12c9f2.netlify.app/)
 
 ## User Stories and Case Study
 ### Deliverables:
