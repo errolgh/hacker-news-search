@@ -30,7 +30,7 @@ Built with:\
 [ReactJS](https://reactjs.org/)\
 [React Redux](https://redux.js.org/)\
 [React Hooks](https://reactjs.org/docs/hooks-intro.html/)\
-[Axios](https://www.npmjs.com/package/axios/)\
-[Thunk middleWare](https://github.com/reduxjs/redux-thunk/)
+[Thunk middleWare](https://github.com/reduxjs/redux-thunk/)\
+[Axios node module](https://www.npmjs.com/package/axios/)
 
 There was no focus on styling the UI beyond visual sanity. The goal for this repo was to explore some of the core concepts of Redux and work with some in vogue React features.
