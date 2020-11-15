@@ -36,7 +36,7 @@ The final principle asks that "changes" are to be made with pure functions. The 
 
 In conclusion, the main perceived benefit to using Redux with React is never needing to pass down props through the component hierarchy. It removes the feel of traversing a tree potentially several nodes deep in order to render data in your app. With the use of Redux and React Hooks, state no longer flows up or down and React components feel omniscient.
 
-## About the Project
+## About this Project
 
 Built with:\
 [ReactJS](https://reactjs.org/)\
