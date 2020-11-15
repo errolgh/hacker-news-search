@@ -44,7 +44,6 @@ export const clearHistory = () => {
 
 
 export const clearQuery = query => {
-  console.log("hit action")
   return {
     type: "CLEAR_QUERY",
     payload: query

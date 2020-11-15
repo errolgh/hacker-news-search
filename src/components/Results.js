@@ -9,9 +9,11 @@ export default function Results () {
 
     const renderResults = () => {
         return results.map(r => {
-            return (<li key={r.objectID} className="App-li">
+            if (r.url){
+            return (<li key={parseInt(r.objectID)} className="App-li">
                 <a href={r.url}>{r.title}</a>
-            </li>)
+            </li>) 
+            }
         })
     }
 

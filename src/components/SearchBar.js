@@ -25,11 +25,11 @@ export default function SearchBar () {
     return (
         <div className="App">
             <h1>Hacker News Story Search</h1>
-            <form onSubmit={(event)=>handleSubmit(event)} id="searchform">
+            <form onSubmit={(event)=>handleSubmit(event)} id="searchForm">
                 <input
                     id="prompt"
                     required
-                    onChange={handleInput}            
+                    onChange={handleInput}
                     value={query}
                     placeholder="Search for Stories"
                 />
