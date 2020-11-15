@@ -20,7 +20,7 @@ A user's search history has full CRUD capabilities. Recent searches can be revis
 
 A user can "navigate" back to the top stories without triggering another request to the API.
 
-A user is reminded of their search term and how many terms they have searched for.
+A user is knows their current search term, how many results have been returned, and how many terms they have searched for.
 
 ## About the Project
 
