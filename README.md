@@ -12,12 +12,12 @@ This SPA features the Hacker News Algolia API.
 
 
 ## User Stories and Case Study
-**Deliverables**
+**Deliverables**\
 A user launches the application and the top stories from the Hacker News Algolia API are rendered.
 
 A user's search history is stored in a state object.
 
-**Quality of Life Features**
+**Quality of Life Features**\
 A user's search history has full CRUD capabilities. Recent searches can be revisited and individually deleted. The entire recent search history can also be deleted.
 
 A user can "navigate" back to the top stories without triggering another request to the API.
