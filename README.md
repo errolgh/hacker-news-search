@@ -26,7 +26,7 @@ A user is knows their current search term, how many results have been returned, 
 A user can "navigate" back to the top stories without triggering another request to the API.
 
 ### Use Case:
-Redux has 3 principles.
+Redux has 3 principles:
 
 The first rule states that there is a single source of truth for the state object. The trade off for having a single, easy-to-render state is writing more boiler plate-- which may be heavy-handed for smaller applications, but can actually save time for larger builds.
 
