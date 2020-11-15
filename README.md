@@ -2,7 +2,7 @@
 This SPA features the Hacker News Algolia API.
 
 ## Install
-**Local environment:**\
+### Local environment:
 \
 `git clone https://github.com/errolgh/hacker-news-search.git`\
 \
