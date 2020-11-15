@@ -1,8 +1,9 @@
-import './App.css'
+import TopStories from './components/TopStories'
 import SearchBar from './components/SearchBar'
 import History from './components/History'
 import Results from './components/Results'
-import TopStories from './components/TopStories'
+import Footer from './components/Footer'
+import './App.css'
 
 export default function App () {
   return (
@@ -11,6 +12,7 @@ export default function App () {
       <Results />
       <TopStories />
       <History />
+      <Footer />
     </div>
   )
 }
