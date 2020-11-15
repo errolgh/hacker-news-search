@@ -1,5 +1,5 @@
 # Hacker News Search
-This SPA features the Hacker News Algolia API.
+This SPA features the [Hacker News Algolia API](https://hn.algolia.com/api/).
 
 ## Install
 ### Local environment:
