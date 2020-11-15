@@ -23,7 +23,7 @@ export default function Results () {
                 <div>
                     <h3 className="SubHeader">Showing results {results.length} for "{lastQuery}"</h3>
                     <button 
-                        className="Button-margin"
+                        className="Left-margin"
                         onClick={()=>dispatch(clearResults(results))}
                     >
                         Back to Top Stories

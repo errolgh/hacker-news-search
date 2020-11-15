@@ -1,8 +1,8 @@
-import './App.css'
+import TopStories from './components/TopStories'
 import SearchBar from './components/SearchBar'
 import History from './components/History'
 import Results from './components/Results'
-import TopStories from './components/TopStories'
+import './App.css'
 
 export default function App () {
   return (

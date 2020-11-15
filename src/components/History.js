@@ -35,7 +35,7 @@ export default function History () {
                     <ul>
                         {renderHistory()}
                     </ul>
-                    <button className= "Button-margin" onClick={()=>dispatch(clearHistory())}>
+                    <button className= "Left-margin" onClick={()=>dispatch(clearHistory())}>
                         Clear All History
                     </button>
                 </div>
