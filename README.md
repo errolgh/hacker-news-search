@@ -8,6 +8,8 @@ git clone https://github.com/errolgh/hacker-news-search.git
 npm i
 npm start
 ```
+### Hosted by Netlify:
+[Hacker News Search App](https://cranky-stonebraker-12c9f2.netlify.app/)
 
 ## User Stories and Case Study
 ### Deliverables:
