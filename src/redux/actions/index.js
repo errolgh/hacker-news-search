@@ -10,7 +10,6 @@ export const topStoriesQuery = () => async dispatch => {
 
 export const submitQuery = query => async dispatch => {
   const response = await SEARCH_API.get(`${query}`)
-  console.log("we are attempting to submit the query: ", query)
   dispatch( {type: "GET_RESULTS", payload: response.data.hits } )
   dispatch( {type: "CLEAR_ENTRY", payload: query } )
 }
@@ -45,5 +44,9 @@ export const clearHistory = () => {
 
 
 export const clearQuery = query => {
-  return {type: "CLEAR_QUERY"}
+  console.log("hit action")
+  return {
+    type: "CLEAR_QUERY",
+    payload: query
+  }
 }

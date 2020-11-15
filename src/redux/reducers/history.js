@@ -5,8 +5,7 @@ export const historyReducer = (state = [], action) => {
         case "CLEAR_HISTORY":
             return []
         case "CLEAR_QUERY":
-            console.log("we are close")
-            return state
+            return [...state.filter(entry => entry !== action.payload)]
         default:
             return state
     }

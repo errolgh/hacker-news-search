@@ -1,11 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { clearHistory, submitQuery, lastQuery } from '../redux/actions'
+import { clearHistory, submitQuery, lastQuery, clearQuery } from '../redux/actions'
 
 export default function History () {
     const history = useSelector(state => state.history)
-    const lastState = useSelector(state => state)
     const dispatch = useDispatch()
-
 
 
     const handleQuery = query => {
@@ -13,17 +11,14 @@ export default function History () {
         dispatch(lastQuery(query))
     }
 
+
     const renderHistory = () => {
-        console.log("lastState: ", lastState)
-        console.log('history:' , history)
         return history.map(h => {
-            return (<li className="App-li">
-                <button 
-                    key={h} 
-                    onClick={()=>handleQuery(h)}
-                    className="App-history">
-                        {h}
+            return (<li key={h} className="App-li">
+                <button onClick={()=>handleQuery(h)} className="App-history">
+                    {h}
                 </button>
+                <button className="History-delete" onClick={()=>dispatch(clearQuery(h))}>x</button>
             </li>
             )
         })
@@ -39,7 +34,9 @@ export default function History () {
                     <ul>
                         {renderHistory()}
                     </ul>
-                    <button className= "Button-margin" onClick={()=>dispatch(clearHistory())}>Clear History</button>
+                    <button className= "Button-margin" onClick={()=>dispatch(clearHistory())}>
+                        Clear All History
+                    </button>
                 </div>
             }
         </div>

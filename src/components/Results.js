@@ -21,13 +21,13 @@ export default function Results () {
             {!!results.length &&
                 <div>
                     <h3 className="SubHeader">Showing results for "{lastQuery}"</h3>
-                    <ul>{renderResults()}</ul>
                     <button 
-                    className="Button-margin"
-                    onClick={()=>dispatch(clearResults(results))}
+                        className="Button-margin"
+                        onClick={()=>dispatch(clearResults(results))}
                     >
                         Back to Top Stories
                     </button>
+                    <ul>{renderResults()}</ul>
                 </div>
             } 
         </div>
