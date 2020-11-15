@@ -1,21 +1,20 @@
 # Hacker News Search
 This SPA features the Hacker News Algolia API.
-\
-\
+
 ## Install
 `git clone https://github.com/errolgh/hacker-news-search.git`\
 \
 `npm i`\
 \
 `npm start`
-\
-\
+
+
 ## User Stories
 A user opens the application and sees the top stories from the Hacker News Algolia API.
 
-A user's search history is stored in a state object, has full CRUD capability, and can be revisited by clicking on any of the terms in the Search History section. 
-\
-\
+A user's search history is stored in a state object, has full CRUD capability, and can be revisited by clicking on any of the terms in the Search History section.
+
+
 ## About the Project
 
 Built with:\
