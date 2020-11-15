@@ -18,16 +18,22 @@
 
 
 .Button-margin {
-  margin-left: 3px;
+  margin-left: 23px;
 }
 
 
 .App-history {
-    margin-bottom: 2px;
     background: none !important;
     border: none;
     padding: 0!important;
-    color: #069;
+    color: purple;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+.History-tip {
+  margin-left: 40px;
+  font-style: italic;
+  color: gray;
 }

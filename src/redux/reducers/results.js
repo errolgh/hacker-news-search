@@ -3,7 +3,7 @@ export const resultsReducer = (state = [], action) => {
         case "GET_RESULTS":
             return [...action.payload, state]
         case "CLEAR_RESULTS":
-            return state
+            return []
         default:
             return state
     }

@@ -1,10 +1,11 @@
 import { useState } from "react"
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { submitQuery, lastQuery, addToHistory } from '../redux/actions'
 
 function SearchBar() {
     const [query, setQuery] = useState("")
     const dispatch = useDispatch()
+    const history = useSelector(state => state.history)
     
 
     const handleInput = event => {
@@ -16,7 +17,7 @@ function SearchBar() {
         event.preventDefault()
         dispatch(submitQuery(query))
         dispatch(lastQuery(query))
-        dispatch(addToHistory(query))
+        !history.includes(query) && dispatch(addToHistory(query))
         setQuery("")
     }
 

@@ -1,8 +1,10 @@
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { clearResults } from '../redux/actions'
 
 export default function Results () {
     const results = useSelector(state => state.results)
     const lastQuery = useSelector(state => state.lastQuery)
+    const dispatch = useDispatch()
 
 
     const renderResults = () => {
@@ -18,7 +20,12 @@ export default function Results () {
         <div>
             {!!results.length &&
                 <div>
-                    <button>Back to Top Stories</button>
+                    <button 
+                    className="Button-margin"
+                    onClick={()=>dispatch(clearResults(results))}
+                    >
+                        Back to Top Stories
+                    </button>
                     <h3 className="SubHeader">Showing results for "{lastQuery}"</h3>
                     <ul>{renderResults()}</ul>
                 </div>

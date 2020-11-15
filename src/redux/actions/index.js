@@ -1,22 +1,22 @@
 import { TOP_STORIES_API, SEARCH_API } from '../../apis'
 
-// default render on page Load
+
+//axios
 export const topStoriesQuery = () => async dispatch => {
   const response = await TOP_STORIES_API.get('')
-  // console.log("from /actions/index.js: ", response.data.hits)
   dispatch( {type: 'GET_TOP_STORIES', payload: response.data.hits } )
 }
 
 
-// on submission of query
 export const submitQuery = query => async dispatch => {
   const response = await SEARCH_API.get(`${query}`)
-  // console.log("from /actions/index.js[submitQuery(){}]: ", response.data.hits)
+  console.log("we are attempting to submit the query: ", query)
   dispatch( {type: "GET_RESULTS", payload: response.data.hits } )
+  dispatch( {type: "CLEAR_ENTRY", payload: query } )
 }
 
 
-// dynamic h3 tag for results
+//ux
 export const lastQuery = query => {
   return {
     type: "SAVE_LAST_QUERY",
@@ -25,8 +25,8 @@ export const lastQuery = query => {
 }
 
 
-export const clearResults = results => {
-  return {type: "CLEAR_RESULTS"}
+export const clearResults = () => {
+    return {type: 'CLEAR_RESULTS'}
 }
 
 
@@ -39,6 +39,11 @@ export const addToHistory = query => {
 }
 
 
-export const clearHistory = result => {
+export const clearHistory = () => {
   return {type: "CLEAR_HISTORY"}
+}
+
+
+export const clearQuery = query => {
+  return {type: "CLEAR_QUERY"}
 }
