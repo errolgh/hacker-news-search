@@ -9,20 +9,19 @@ export default function Results () {
 
     const renderResults = () => {
         return results.map(r => {
-            if (r.url){
             return (<li key={parseInt(r.objectID)} className="App-li">
                 <a href={r.url}>{r.title}</a>
             </li>) 
-            }
         })
     }
 
 
     return (
+        // Only renders when there are results
         <div>
-            {!!results.length &&
+            {!!results.length &&  
                 <div>
-                    <h3 className="SubHeader">Showing results for "{lastQuery}"</h3>
+                    <h3 className="SubHeader">Showing results {results.length} for "{lastQuery}"</h3>
                     <button 
                         className="Button-margin"
                         onClick={()=>dispatch(clearResults(results))}

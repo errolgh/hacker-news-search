@@ -17,6 +17,7 @@ export default function SearchBar () {
         e.preventDefault()
         dispatch(submitQuery(query))
         dispatch(lastQuery(query))
+        // only add this query to history if it does not already exist
         !history.includes(query) && dispatch(addToHistory(query))
         setQuery("")
     }

@@ -25,6 +25,7 @@ export default function TopStories () {
     
     return (
         <div>
+            {!stories.length && <p>Waiting on Hacker News API...</p>}
             {!results[0] && 
                 <div>
                    <h3 className="SubHeader">Today's Top Stories</h3>

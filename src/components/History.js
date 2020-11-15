@@ -26,6 +26,7 @@ export default function History () {
 
 
     return (
+        // only renders when there is a history, else render "no recent history"
         <div>
             {!history.length && <div><p className="History-tip">(No recent history)</p></div>}
             {!!history.length &&
