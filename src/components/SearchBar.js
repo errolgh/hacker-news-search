@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { submitQuery, lastQuery, addToHistory } from '../redux/actions'
 
@@ -8,13 +8,13 @@ export default function SearchBar () {
     const dispatch = useDispatch()
     
 
-    const handleInput = event => {
-        setQuery(event.target.value)
+    const handleInput = e => {
+        setQuery(e.target.value)
     }
 
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
+    const handleSubmit = e => {
+        e.preventDefault()
         dispatch(submitQuery(query))
         dispatch(lastQuery(query))
         !history.includes(query) && dispatch(addToHistory(query))
@@ -25,15 +25,19 @@ export default function SearchBar () {
     return (
         <div className="App">
             <h1>Hacker News Story Search</h1>
-            <form onSubmit={(event)=>handleSubmit(event)} id="searchForm">
+            <form onSubmit={(e)=>handleSubmit(e)} id="searchForm">
                 <input
-                    id="prompt"
-                    required
+                    placeholder="Search for Stories"
                     onChange={handleInput}
                     value={query}
-                    placeholder="Search for Stories"
+                    id="prompt"
+                    required
                 />
-                <input className="Button-margin" type="submit" value="Search" />
+                <input 
+                    className="Button-margin"
+                    value="Search"
+                    type="submit"
+                />
             </form>
         </div>
     )

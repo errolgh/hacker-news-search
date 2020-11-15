@@ -9,8 +9,8 @@
 
 
 .App-logo {
-  height: 40vmin;
   pointer-events: none;
+  height: 40vmin;
 }
 
 
@@ -26,25 +26,24 @@
 
 
 .App-history {
-    background: none;
-    border: none;
-    padding: 0;
-    color: purple;
-    text-decoration: none;
-    cursor: pointer;
+  text-decoration: none;
+  background: none;
+  color: purple;
+  cursor: pointer;
+  border: none;
+  padding: 0;
 }
 
 
 .History-tip {
-  margin-left: 40px;
   font-style: italic;
+  margin-left: 40px;
   color: gray;
 }
 
 .History-delete {
-  /* padding: 0px; */
   background: none;
+  margin-left: 5px;
   border: none;
-  margin-left: 5px
 
 }

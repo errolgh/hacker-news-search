@@ -2,8 +2,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { clearResults } from '../redux/actions'
 
 export default function Results () {
-    const results = useSelector(state => state.results)
     const lastQuery = useSelector(state => state.lastQuery)
+    const results = useSelector(state => state.results)
     const dispatch = useDispatch()
 
 

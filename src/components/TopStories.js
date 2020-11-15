@@ -4,7 +4,7 @@ import { topStoriesQuery } from "../redux/actions"
 
 export default function TopStories () {
     const stories = useSelector( state => state.topStories )
-    const results = useSelector( state => state.results[0] )
+    const results = useSelector( state => state.results )
     const dispatch = useDispatch()
     
     
@@ -25,7 +25,7 @@ export default function TopStories () {
     
     return (
         <div>
-            {!results && 
+            {!results[0] && 
                 <div>
                    <h3 className="SubHeader">Today's Top Stories</h3>
                    <ul>{stories && renderTopStories()}</ul>
