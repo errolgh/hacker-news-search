@@ -13,7 +13,7 @@ This SPA features the Hacker News Algolia API.
 
 ## User Stories and Case Study
 **Deliverables**\
-A user launches the application and the top stories from the Hacker News Algolia API are rendered.
+A user launches the application and the top stories from the Hacker News Algolia API renders.
 
 A user's search history is stored in a state object.
 
