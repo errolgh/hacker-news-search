@@ -20,14 +20,14 @@ export default function Results () {
         <div>
             {!!results.length &&
                 <div>
+                    <h3 className="SubHeader">Showing results for "{lastQuery}"</h3>
+                    <ul>{renderResults()}</ul>
                     <button 
                     className="Button-margin"
                     onClick={()=>dispatch(clearResults(results))}
                     >
                         Back to Top Stories
                     </button>
-                    <h3 className="SubHeader">Showing results for "{lastQuery}"</h3>
-                    <ul>{renderResults()}</ul>
                 </div>
             } 
         </div>
