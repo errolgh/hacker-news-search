@@ -1,5 +1,5 @@
 <h1>Hacker News Search</h1>
-This SPA features the [Hacker News Algolia API](https://hn.algolia.com/api/).
+This SPA features the <a href="https://hn.algolia.com/api/">Hacker News Algolia API<a/>.
 
 ## Install
 ### Local environment:
