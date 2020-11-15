@@ -9,12 +9,11 @@ body {
 }
 
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
 }
 
 
-a {
-  text-decoration: none;
+h3 {
+  margin-left: 23px;
 }

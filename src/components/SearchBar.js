@@ -35,7 +35,7 @@ export default function SearchBar () {
                     required
                 />
                 <input 
-                    className="Button-margin"
+                    className="Left-margin"
                     value="Search"
                     type="submit"
                 />
