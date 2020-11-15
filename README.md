@@ -2,6 +2,8 @@
 This SPA features the Hacker News Algolia API.
 
 ## Install
+**Local environment:**\
+\
 `git clone https://github.com/errolgh/hacker-news-search.git`\
 \
 `npm i`\
@@ -24,4 +26,4 @@ Built with:\
 [Axios](https://www.npmjs.com/package/axios/)\
 [Thunk middleWare](https://github.com/reduxjs/redux-thunk/)
 
-There is no focus on styling the UI beyond visual sanity. The goal for this repo was to explore some of the core concepts of Redux and work with in vogue React features.
+There was no focus on styling the UI beyond visual sanity. The goal for this repo was to explore some of the core concepts of Redux and work with some in vogue React features.
