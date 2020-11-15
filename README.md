@@ -1,7 +1,7 @@
 <h1>Hacker News Search</h1>
-This SPA features the <a href="https://hn.algolia.com/api/">Hacker News Algolia API<a/>.
+This SPA features the <a href="https://hn.algolia.com/api/">Hacker News Algolia API.<a/>
 
-## Install
+<h2>Install</h2>
 ### Local environment:
 ```
 git clone https://github.com/errolgh/hacker-news-search.git
