@@ -5,6 +5,7 @@ This SPA features the [Hacker News Algolia API.](https://hn.algolia.com/api/)
 ### Local environment:
 ```
 git clone https://github.com/errolgh/hacker-news-search.git
+cd hacker-news-search
 npm i
 npm start
 ```
@@ -34,7 +35,7 @@ The second rule of Redux is that state is read-only. Anytime a piece of state ne
 
 The final rule asks that "changes" are to be made with pure functions. The only way state should be changed is with Redux reducers. They make copies of the previous state object to work with in order to return a new state object. New state can only be derived using from the old state and a dispatched Redux action.
 
-In conclusion, the main perceived benefit to using Redux with React is never needing to pass down props through the component hierarchy. It removes the feel of traversing a tree potentially several nodes deep in order to render data in your app. With the use of Redux and React Hooks, state no longer flows up or down and React components feel omniscient.
+In conclusion, the main perceived benefit to using Redux with React is never needing to pass down props through the component hierarchy. It removes the feel of traversing a tree potentially several nodes deep in order to render data in your app. With the use of Redux and React Hooks, state flows up or down, and React components feel omniscient.
 
 ## About this Project
 
