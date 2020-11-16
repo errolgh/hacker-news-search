@@ -15,7 +15,7 @@ npm start
 
 ## User Stories and Case Study
 ### Deliverables:
-A user launches the application and the top stories from the Hacker News Algolia API renders.
+A user launches the application and the top stories from the Hacker News Algolia API render.
 
 A user's search history is stored in a state object.
 
