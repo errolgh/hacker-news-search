@@ -31,9 +31,9 @@ Redux has 3 rules:
 
 The first rule states that there is a single source of truth for the state object. The trade off for having a single, easy-to-render state is writing more boiler plate-- which may be heavy-handed for smaller applications, but can actually save time for larger builds.
 
-The second rule of Redux is that state is read-only. Anytime a piece of state needs to different than it currently is, a new state object is created. Redux will compare the previous state object with an incoming one, and only produce a rerender if the strict comparison finds that the two objects are stored at different locations in memory (even if the keys and values are identical. This provides high-fidelity state while building your application-- state will never actually be mutated.
+The second rule of Redux is that state is read-only. Anytime a piece of state needs to be different than it currently is, a new state object is created. Redux will compare the previous state object with an incoming one, and only produce a rerender if the strict comparison finds that the two objects are stored at different locations in memory (even if the keys and values are identical). This provides high-fidelity state while building your application-- state will never actually be mutated.
 
-The final rule asks that "changes" are to be made with pure functions. The only way state should be changed is with Redux reducers. They make copies of the previous state object to work with in order to return a new state object. New state can only be derived using from the old state and a dispatched Redux action.
+The final rule asks that "changes" are to be made with pure functions. The only way state should be changed is with Redux reducers. They make copies of the previous state object to work with in order to return a new state object. New state can only be derived from the old state and a dispatched Redux action.
 
 In conclusion, the main perceived benefit to using Redux with React is never needing to pass down props through the component hierarchy. It removes the feel of traversing a tree potentially several nodes deep in order to render data in your app. With the use of Redux and React Hooks, state flows up or down, and React components feel omniscient.
 
