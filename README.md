@@ -10,7 +10,7 @@ npm i
 npm start
 ```
 
-### I Hosted it on Netlify:
+### Deployed to Netlify:
 [My Hacker News Search App :rocket:](https://cranky-stonebraker-12c9f2.netlify.app/) 
 
 ## User Stories and Case Study
