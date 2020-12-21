@@ -11,7 +11,7 @@ npm start
 ```
 
 ### Deployed to Netlify:
-[My Hacker News Search App :rocket:](https://cranky-stonebraker-12c9f2.netlify.app/) 
+[My Hacker News Search App :rocket:](https://hacker-news-search-errolgh.netlify.app/) 
 
 ## User Stories and Case Study
 ### Deliverables:
